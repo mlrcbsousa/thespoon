@@ -1,0 +1,12 @@
+
+
+<p>List of restaurants</p>
+
+<!-- app/views/restaurants/index.html.erb -->
+<ul>
+  <% @restaurants.each do |id, restaurant| %>
+<!--     <%=  %> -->
+    <li><%= restaurant[:name] %> (<%= restaurant[:address] %>)
+    <%= link_to 'Details', restaurant_path(id) %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,25 @@
+<!-- app/views/pages/home.html.erb -->
+<h3>Welcome to thespoon</h3>
+<hr>
+
+<h5>Filter by Category</h5>
+<form action="/restaurants" method="get" class="form-inline">
+  <div class="form-group">
+    <input class="form-control" type="text" name="category" placeholder="What kind of food?">
+  </div>
+  <input class="btn btn-primary" type="submit">
+</form>
+
+<hr>
+
+<h5>Add a restaurant</h5>
+<form action="/restaurants" method="post" class="form-inline">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="address" placeholder="Address">
+  </div>
+  <input class="btn btn-primary" type="submit">
+</form>
